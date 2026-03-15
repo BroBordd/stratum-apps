@@ -318,7 +318,6 @@ int main(int,char**){
 
     Stratum s;
     if(!s.init()) return 1;
-    Text::init(s.aspect());
 
     GLuint vs=compileShader(GL_VERTEX_SHADER,VSH);
     GLuint fs=compileShader(GL_FRAGMENT_SHADER,FSH);
@@ -329,6 +328,7 @@ int main(int,char**){
     gColorLoc=glGetUniformLocation(prog,"color");
     glEnable(GL_BLEND);
     glBlendFunc(GL_SRC_ALPHA,GL_ONE_MINUS_SRC_ALPHA);
+    Text::init(s.aspect());
 
     s.onKey([&](const KeyEvent& e){
         if(e.action!=KeyAction::DOWN) return;
