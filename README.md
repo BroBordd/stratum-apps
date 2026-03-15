@@ -1,8 +1,26 @@
 # stratum-apps
-A curated set of standalone applications built on top of [Stratum](https://github.com/BroBordd/stratum), a bare-metal OpenGL ES 2.0 UI framework for Android. These utilities serve as both practical tools and reference implementations for Stratum-based development.
-# Integration
-This repository is consumed as a submodule by both the Stratum and boot-menu repositories. Applications are compiled as standalone binaries and can be launched directly or surfaced through the boot-menu extras system.
-# Requirements
-- Android device with root access
-- Stratum framework libraries (`libstratum.so`, `stub.so`)
-- OpenGL ES 2.0 support
+
+A curated collection of applications built on the [Stratum](https://github.com/BroBordd/stratum) bare-metal OpenGL ES 2.0 UI framework for Android. Consumed as a submodule by both Stratum and [boot-menu](https://github.com/BroBordd/boot-menu).
+
+## Structure
+
+```
+utils/       Practical utility apps surfaced through the boot-menu extras system
+demos/       Demonstration and showcase apps for the Stratum framework
+```
+
+## Utils
+
+- **terminal** — Full PTY-backed terminal emulator with touch keyboard and scrollback history
+- **calculator** — Lightweight expression calculator
+- **brickbreaker** — Arcade-style brick breaker game
+- **signal** — Real-time signal and waveform visualizer
+- **sysinfo** — System information and diagnostics viewer
+
+## Demos
+
+- **bump** — Bump mapping demo
+- **magma** — Magma/lava shader demo
+- **menu** — Basic menu demo
+- **paint** — Touch painting canvas
+- **piano** — Touch piano keyboard
