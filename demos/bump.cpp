@@ -4,6 +4,7 @@
 #include <GLES2/gl2.h>
 #include <linux/input-event-codes.h>
 #include <math.h>
+#include <unistd.h>
 #include <mutex>
 
 static const char* VSH = R"(
@@ -133,5 +134,5 @@ int main(int argc, char** argv) {
     });
 
     s.run();
-    return 0;
+    _exit(0);
 }

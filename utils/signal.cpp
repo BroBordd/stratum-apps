@@ -2,6 +2,7 @@
 #include "StratumArgs.h"
 #include <GLES2/gl2.h>
 #include <linux/input-event-codes.h>
+#include <unistd.h>
 #include <math.h>
 #include <mutex>
 static float mono_now() { struct timespec ts; clock_gettime(CLOCK_MONOTONIC, &ts); return ts.tv_sec + ts.tv_nsec / 1e9f; }
@@ -178,5 +179,5 @@ int main(int argc, char** argv) {
     });
 
     s.run();
-    return 0;
+    _exit(0);
 }

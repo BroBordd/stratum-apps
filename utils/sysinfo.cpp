@@ -567,5 +567,5 @@ int main(int,char**){
     s.run();
     gRunPoller=false;
     poller.join();
-    return 0;
+    _exit(0);
 }

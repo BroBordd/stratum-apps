@@ -10,6 +10,7 @@
 #include <string>
 #include <vector>
 #include <deque>
+#include <unistd.h>
 #include <functional>
 
 static float mono_now(){
@@ -776,5 +777,5 @@ int main(int,char**){
     });
 
     s.run();
-    return 0;
+    _exit(0);
 }

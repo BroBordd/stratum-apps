@@ -719,5 +719,5 @@ int main(int,char**) {
     if (gMasterFd>=0) close(gMasterFd);
     kill(gShellPid,SIGKILL);
     waitpid(gShellPid,nullptr,WNOHANG);
-    return 0;
+    _exit(0);
 }

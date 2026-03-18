@@ -5,6 +5,7 @@
 #include <linux/input-event-codes.h>
 #include <math.h>
 #include <mutex>
+#include <unistd.h>
 #include <string.h>
 
 static float mono_now() {
@@ -279,5 +280,5 @@ int main(int argc, char** argv) {
     });
 
     s.run();
-    return 0;
+    _exit(0);
 }
