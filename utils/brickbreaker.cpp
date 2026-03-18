@@ -273,7 +273,7 @@ int main(int,char**){
     gColorLoc=glGetUniformLocation(prog,"color");
     glEnable(GL_BLEND);
     glBlendFunc(GL_SRC_ALPHA,GL_ONE_MINUS_SRC_ALPHA);
-    Text::init(s.aspect());
+    Text::init(s.aspect(), prog);
 
     s.onKey([&](const KeyEvent& e){
         if(e.action!=KeyAction::DOWN) return;
